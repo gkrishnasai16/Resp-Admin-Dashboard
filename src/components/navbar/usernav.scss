@@ -1,0 +1,78 @@
+.items {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  @media screen and (max-width: 680px) {
+    max-width: fit-content;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background: #fefefe;
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    border-radius: 5px;
+    z-index: 10;
+  }
+    .item {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      position: relative;
+      
+      @media screen and (max-width: 680px) {
+        padding: 10px;
+      }
+      .icon {
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .label {
+        display: none;
+        @media screen and (max-width: 680px){
+          display: block;
+        }
+      }
+      .counter {
+        width: 15px;
+        height: 15px;
+        background-color: red;
+        border-radius: 50%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 10px;
+        font-weight: bold;
+        position: absolute;
+        top: -8px;
+        left: 8px;
+        @media screen and (max-width: 680px){
+          top: 0;
+          left: 5px;
+        }
+      }
+    }
+  }
+
+.itemsRight {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  position: relative;
+  align-items: center;
+  .toggleAvatar {
+    display: none;
+    cursor: pointer;
+    @media screen and (max-width: 680px) {
+      display: block;
+    }
+  }
+  .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+}

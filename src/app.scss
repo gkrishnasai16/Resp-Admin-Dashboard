@@ -1,0 +1,29 @@
+.app{
+  .main{
+    display: flex;
+    .mainContainer {
+      position: absolute;
+      width: calc(100% - 180px);
+      left: 180px;
+      min-height: 100vh;
+      background:#fff;
+      transition: 0.5s;
+      @media (max-width: 991px) {
+        width: calc(100% - 50px);
+        left: 50px;
+      }
+      @media (max-width: 480px) {
+        width: 100%;
+        left: 0;
+      }
+      &.active {
+        width: calc(100% - 50px);
+        left: 50px;
+        @media (max-width: 991px) {
+          left: 180px;
+        }
+      }
+      
+    }
+  }
+}
